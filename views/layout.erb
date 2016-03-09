@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Todo App</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/cms.css">
+  </head>
+  <body>
+    <header>
+      <h1>CMS App</h1>
+    </header>
+
+    <% if  session[:message] %> 
+      <p class = "message"><%= session.delete(:message) %></p>     
+    <% end %>
+
+    
+
+
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>
